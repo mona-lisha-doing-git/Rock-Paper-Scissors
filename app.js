@@ -14,6 +14,7 @@ const genCompChoice=()=>{
     return options[randIdx];
 }
 const drawGame=()=>{
+    console.log("Game was draw.");
     msg.innerText="Game was draw! Play again.";
     msg.style.backgroundColor="#282828";
 }
@@ -22,19 +23,23 @@ const showWinner=(userWin, userChoice,compChoice)=>{
     if(userWin){
         userScore++;
         userScorePara.innerText=userScore;
+        // console.log("You win!");
         msg.innerText=`You win! Your Choice: ${compChoice}, Computer Choice: ${userChoice}`;
         msg.style.backgroundColor="green";
     }
     else{
         compScore++;
         compScorePara.innerText=compScore;
+        // console.log("You lose!");
         msg.innerText=`You lost! Your Choice: ${compChoice}, Computer Choice: ${userChoice}`;
         msg.style.backgroundColor="#d62828";
     }
 };
 const playGame=(userChoice)=>{
+    // console.log("user-choice = ",userChoice);
     //Generate computer choice -> modular
     const compChoice = genCompChoice();
+    // console.log("Computer-choice = ",compChoice);
 
     if(userChoice===compChoice){
         //draw game
@@ -58,6 +63,8 @@ choices.forEach((choice)=>{
     console.log(choice);
     choice.addEventListener("click",()=>{
         const userChoice=choice.getAttribute("id");
+        // console.log("choice was clicked",userChoice);
         playGame(userChoice);
     });
 });
+

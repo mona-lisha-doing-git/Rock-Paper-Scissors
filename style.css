@@ -3,14 +3,15 @@
     padding: 0;
     text-align: center;
 }
-
+body{
+    background-color: #66707a;
+}
 h1{
-    background-color: #081b31;
-    color: white;
+    background-color: #282828;
+    color: #fff;
     height: 5rem;
     line-height: 5rem;
 }
-
 .choice{
     height: 165px;
     width: 165px;
@@ -19,10 +20,12 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
 .choice:hover{
     cursor: pointer;
-    background-color: #081b31;
+    background-color: #404048;
 }
+
 img{
     height: 150px;
     width: 150px;
@@ -37,28 +40,30 @@ img{
     gap: 3rem;
     margin-top: 5rem;
 }
-
 .score-board{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    margin: 5rem;
+    margin-top: 3rem;
     gap: 5rem;
 }
 
-#user-score, #comp-score{
-    font-size: 3rem;
+#user-score,
+#comp-score{
+    font-size: 4rem;
 }
 
 .msg-container{
     margin-top: 5rem;
 }
 #msg{
-    background-color: #081b31;
+    margin-top: 5rem;
+    background-color: #282828;
     color: white;
     font-size: 2rem;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 }
